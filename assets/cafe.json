@@ -1,0 +1,46 @@
+{
+    "products":[
+    {
+        "id": "1",
+        "name": "Burger",
+        "dec": "hot spicy burger",
+        "price": 150,
+        "imageurl": "assets/burger.png"
+    },
+    {
+        "id": "2",
+        "name": "Bottle",
+        "dec": "Cold Drink For your refreshment",
+        "price": 30,
+        "imageurl": "assets/colddrink.png"
+    },
+    {
+        "id": "3",
+        "name": "Pizza",
+        "dec": "Hot Fresh Pizza",
+        "price": 700,
+        "imageurl": "assets/pizza.png"
+    },
+        {
+            "id": "4",
+            "name": "Shake",
+            "dec": "Cold Drink for refreshment",
+            "price": 80,
+            "imageurl": "assets/shake.png"
+        },
+        {
+            "id": "5",
+            "name": "Sandwich",
+            "dec": "Hot Fresh Sandwich",
+            "price": 100,
+            "imageurl": "assets/sandwich.png"
+        },
+        {
+            "id": "6",
+            "name": "Shwarma",
+            "dec": "Hot Fresh Shawarma",
+            "price": 70,
+            "imageurl": "assets/shawrma.png"
+        }
+]
+}
