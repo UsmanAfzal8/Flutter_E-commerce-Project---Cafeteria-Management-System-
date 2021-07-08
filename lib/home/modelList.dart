@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project2/cart/cartModel.dart';
+import 'package:project2/cartadded.dart';
 
 import '../catalog.dart';
 import '../theme.dart';
@@ -89,17 +91,7 @@ class catlogitem extends StatelessWidget {
                     SizedBox(
                       width: 80,
                     ),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                            Theme.of(context).buttonColor),
-                        shape: MaterialStateProperty.all(
-                          StadiumBorder(),
-                        ),
-                      ),
-                      child: Text("Buy"),
-                    ),
+                    cartList(catalog: catalog),
                   ],
                 )
               ],

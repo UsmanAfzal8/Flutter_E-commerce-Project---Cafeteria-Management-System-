@@ -5,6 +5,8 @@ import 'package:project2/catalog.dart';
 import 'package:project2/clipping/clip.dart';
 import 'package:project2/theme.dart';
 
+import '../cartadded.dart';
+
 class HomeExtend extends StatelessWidget {
   final item catalog;
 
@@ -43,17 +45,7 @@ class HomeExtend extends StatelessWidget {
           ),
           ConstrainedBox(
             constraints: BoxConstraints.tightFor(width: 100, height: 50),
-            child: ElevatedButton(
-              onPressed: () => Navigator.pushNamed(context, '/cart'),
-              style: ButtonStyle(
-                backgroundColor:
-                    MaterialStateProperty.all(Theme.of(context).buttonColor),
-                shape: MaterialStateProperty.all(
-                  StadiumBorder(),
-                ),
-              ),
-              child: Text("Buy"),
-            ),
+            child: cartList(catalog: catalog),
           ),
         ],
       ),

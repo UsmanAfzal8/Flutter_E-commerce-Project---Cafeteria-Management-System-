@@ -17,17 +17,20 @@ class cartWedget extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.all(8.0),
-          ),
-          Expanded(
-            child: _cartItem(),
-          ),
-          Divider(),
-          _cartTotal(),
-        ],
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.all(8.0),
+            ),
+            Expanded(
+              child: _cartItem(),
+            ),
+            Divider(),
+            _cartTotal(),
+          ],
+        ),
       ),
     );
   }
@@ -37,8 +40,9 @@ class _cartTotal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _cart = cartModel();
+    // print(_cart.totalPrice);
     return SizedBox(
-        height: 150,
+        height: 200,
         child: Column(
           children: [
             Text(
@@ -52,7 +56,7 @@ class _cartTotal extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text(
-                  _cart.totalPrice.toString(),
+                  "${_cart.totalPrice}",
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
@@ -97,7 +101,10 @@ class __cartItemState extends State<_cartItem> {
               leading: Icon(Icons.done),
               trailing: IconButton(
                 icon: Icon(Icons.delete),
-                onPressed: () {},
+                onPressed: () {
+                  _cart.remove(_cart.items[index]);
+                  setState(() {});
+                },
               ),
               title: Text(_cart.items[index].name),
             ));

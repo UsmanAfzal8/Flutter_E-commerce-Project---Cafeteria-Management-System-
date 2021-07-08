@@ -1,6 +1,9 @@
 class Model {
+  static final CarModel = Model._init();
+  Model._init();
+  factory Model() => CarModel;
   static List<item> product = [];
-  item getById(int id) =>
+  item getById(String id) =>
       product.firstWhere((element) => element.id == id, orElse: null);
   item getByPosition(int pos) => product[pos];
 }
