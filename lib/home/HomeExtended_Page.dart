@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project2/catalog.dart';
 import 'package:project2/clipping/clip.dart';
-import 'package:project2/theme.dart';
-
 import '../cartadded.dart';
 
 class HomeExtend extends StatelessWidget {
@@ -87,6 +85,11 @@ class HomeExtend extends StatelessWidget {
                       fontSize: 15,
                     ),
                   ),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Text(
+                      "Fast food is food from a restaurant (sit-down, take-out, or delivery) that is quick, convenient, and usually cheap. Fast food is usually higher in fat, calories, cholesterol, and sodium in comparison to homemade meals."),
                 ]),
               ),
             )

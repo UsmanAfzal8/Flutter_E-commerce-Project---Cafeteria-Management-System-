@@ -19,7 +19,7 @@ class _cartListState extends State<cartList> {
   @override
   final _cartCatalog = cartModel();
   Widget build(BuildContext context) {
-    bool change = _cartCatalog.items.contains(widget.catalog) ?? false;
+    bool change = _cartCatalog.items.contains(widget.catalog) ? true : false;
     return ElevatedButton(
       onPressed: () {
         if (!change) {
